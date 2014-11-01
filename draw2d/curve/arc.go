@@ -2,10 +2,7 @@
 // created: 21/11/2010 by Laurent Le Goff
 package draw2d
 
-import (
-	"code.google.com/p/freetype-go/freetype/raster"
-	"math"
-)
+import "math"
 
 func SegmentArc(t LineTracer, x, y, rx, ry, start, angle, scale float64) {
 	end := start + angle

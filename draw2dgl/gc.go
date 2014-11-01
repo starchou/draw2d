@@ -1,12 +1,13 @@
 package draw2dgl
 
 import (
-	"code.google.com/p/draw2d/draw2d"
-	"code.google.com/p/freetype-go/freetype/raster"
 	"gl"
 	"image"
 	"image/color"
 	"image/draw"
+
+	"github.com/starchou/draw2d/draw2d"
+	"github.com/starchou/freetype-go/freetype/raster"
 	//"log"
 )
 

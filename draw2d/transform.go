@@ -4,8 +4,9 @@
 package draw2d
 
 import (
-	"code.google.com/p/freetype-go/freetype/raster"
 	"math"
+
+	"github.com/starchou/freetype-go/freetype/raster"
 )
 
 type MatrixTransform [6]float64

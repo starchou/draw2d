@@ -9,9 +9,10 @@ import (
 	"log"
 	"os"
 
-	"code.google.com/p/draw2d/draw2d"
 	"image"
 	"image/png"
+
+	"github.com/starchou/draw2d/draw2d"
 )
 
 func saveToPngFile(filePath string, m image.Image) {

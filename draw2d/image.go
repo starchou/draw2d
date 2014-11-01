@@ -4,12 +4,13 @@
 package draw2d
 
 import (
-	"code.google.com/p/freetype-go/freetype"
-	"code.google.com/p/freetype-go/freetype/raster"
 	"image"
 	"image/color"
 	"image/draw"
 	"log"
+
+	"github.com/starchou/freetype-go/freetype"
+	"github.com/starchou/freetype-go/freetype/raster"
 )
 
 type Painter interface {
@@ -45,7 +46,7 @@ func NewGraphicContext(img draw.Image) *ImageGraphicContext {
 	width, height := img.Bounds().Dx(), img.Bounds().Dy()
 	dpi := 92
 	ftContext := freetype.NewContext()
-	ftContext.SetDPI(float64(dpi))
+	ftContext.SetDPI(int(dpi))
 	ftContext.SetClip(img.Bounds())
 	ftContext.SetDst(img)
 	gc := &ImageGraphicContext{
@@ -65,7 +66,7 @@ func NewGraphicContextWithPainter(img draw.Image, painter Painter) *ImageGraphic
 	width, height := img.Bounds().Dx(), img.Bounds().Dy()
 	dpi := 92
 	ftContext := freetype.NewContext()
-	ftContext.SetDPI(float64(dpi))
+	ftContext.SetDPI(int(dpi))
 	ftContext.SetClip(img.Bounds())
 	ftContext.SetDst(img)
 	gc := &ImageGraphicContext{
@@ -82,7 +83,7 @@ func NewGraphicContextWithPainter(img draw.Image, painter Painter) *ImageGraphic
 
 func (gc *ImageGraphicContext) SetDPI(dpi int) {
 	gc.DPI = dpi
-	gc.freetype.SetDPI(float64(dpi))
+	gc.freetype.SetDPI(int(dpi))
 }
 
 func (gc *ImageGraphicContext) GetDPI() int {

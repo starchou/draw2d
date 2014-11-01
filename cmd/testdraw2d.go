@@ -9,11 +9,12 @@ import (
 	"log"
 	"os"
 
-	"code.google.com/p/draw2d/draw2d"
 	"image"
 	"image/color"
 	"image/png"
 	"math"
+
+	"github.com/starchou/draw2d/draw2d"
 )
 
 const (
@@ -31,7 +32,7 @@ func initGc(w, h int) (image.Image, draw2d.GraphicContext) {
 
 	gc.SetStrokeColor(image.Black)
 	gc.SetFillColor(image.White)
-	// fill the background 
+	// fill the background
 	//gc.Clear()
 
 	return i, gc
